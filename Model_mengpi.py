@@ -49,14 +49,14 @@ class SamplingMengpi:
         angle_step_rad = np.deg2rad(intervalangle)
 
         # 生成角度的数组
-        angles = np.arange(angle_start_rad, angle_end_rad + angle_step_rad, angle_step_rad)
+        angles = np.arange(angle_start_rad, angle_end_rad + angle_step_rad-0.01, angle_step_rad)
 
         # 计算每个角度对应的x坐标和y坐标
         x = self.center[0] + self.radius * np.cos(angles)
         y = self.center[1] + self.radius * np.sin(angles)
 
         # 生成z的数组
-        z = np.arange(point[2]-(y_grids-1)/2*intervallength, point[2]+(y_grids-1)/2*intervallength + intervallength, intervallength)
+        z = np.arange(point[2]-(y_grids-1)/2*intervallength, point[2]+(y_grids-1)/2*intervallength + intervallength-0.01, intervallength)
         points = []
         for i in range(len(x)):
             for j in range(len(z)):

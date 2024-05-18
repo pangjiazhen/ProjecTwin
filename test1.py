@@ -2,7 +2,7 @@ import roboticstoolbox as rtb
 from spatialmath import SE3
 import math
 import numpy as np
-import fun_projection as fp
+import ProjectionFun as fp
 # Make a Panda robot
 robot = rtb.models.DH.UR5()
 pose = np.array([0,0,0,0,0,0]) *math.pi/180

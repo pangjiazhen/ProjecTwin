@@ -1,7 +1,7 @@
-import projectionscene as scene
-import fun_projection as fp
+import ProjectionScene as scene
+import ProjectionFun as fp
 import visualization as vl
-import fun_fieldsolve as fs
+import FieldFun as fs
 import matplotlib.pyplot as plt
 import numpy as np
 # 场景初始化
