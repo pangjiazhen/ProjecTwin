@@ -29,7 +29,23 @@ class Moblierobot:
         #最后拼接
         matrix_with_extra_column = np.hstack((subm1, subm2))
         matrix_with_extra_row = np.vstack((matrix_with_extra_column, subm3))
+        # self.robot.qlim = np.array[
+        #     [-np.pi / 2, np.pi / 2],  # 第1个关节的角度范围
+        #     [-np.pi / 2, np.pi / 2],  # 第2个关节的角度范围
+        #     [-np.pi / 2, np.pi / 2],  # 第3个关节的角度范围
+        #     [-np.pi / 2, np.pi / 2],  # 第3个关节的角度范围
+        #     [-np.pi / 2, np.pi / 2],  # 第3个关节的角度范围
+        #     [-np.pi / 2, np.pi / 2],  # 第3个关节的角度范围
+        # ]
+        self.robot.links[0].qlim = [-1 / 2, 1 / 2]
+        self.robot.links[1].qlim = [-1 / 2, 1 / 2]
+        self.robot.links[2].qlim = [-1 / 2, 1 / 2]
+        self.robot.links[3].qlim = [-1 / 2, 1 / 2]
+        self.robot.links[4].qlim = [-1 / 2, 1 / 2]
+        self.robot.links[5].qlim = [-1 / 2, 1 / 2]
+
         endjoint = self.robot.ikine_LM(matrix_with_extra_row, q0 = self.startjoint).q
+
         answer = self.robot.ikine_LM(matrix_with_extra_row, q0 = self.startjoint).success
         return endjoint, answer
 

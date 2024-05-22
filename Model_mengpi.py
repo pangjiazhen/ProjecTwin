@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import KDTree
-
+import math
 
 
 class SamplingMengpi:
@@ -21,7 +21,7 @@ class SamplingMengpi:
         angle_step_rad = np.deg2rad(angle_step)
 
         # 生成角度的数组
-        angle_set = np.arange(angle_start_rad, angle_end_rad + angle_step_rad, angle_step_rad)
+        angle_set = np.arange(angle_start_rad , angle_end_rad + angle_step_rad, angle_step_rad)
 
         # 计算每个角度对应的x坐标和y坐标
         x = self.center[0] + self.radius * np.cos(angle_set)

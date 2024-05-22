@@ -35,8 +35,8 @@ def block2D_detection(points, pos, radius, center):
     pos2D = pos[[0, 1]]
     center = np.array(center)
     center2D = center[[0,1]]
-    lines = center2D - points2D
-    line_vectors = [-lines[:,1], lines[:,0]]
+    lines = pos2D - center2D
+    line_vectors = [-lines[1], lines[0]]
     line_vectors = np.array(line_vectors).T
     point_vectors = pos2D - points2D
     point_vectors = np.array(point_vectors)
