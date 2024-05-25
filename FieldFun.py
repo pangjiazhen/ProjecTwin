@@ -57,7 +57,7 @@ class Pfield:
     def rt1_range(self, num, p, r):
         points = np.array(generate_sphere_point(num) * r) +p
         points = points[points[:, 1] < p[1]]
-        self.pointcloud = points[points[:, 2] > 0]
+        self.pointcloud = points[points[:, 2] > 0.6]
 
     def rt2_block(self, type, pos, radius, center):
         if (type == 'cylinder'):

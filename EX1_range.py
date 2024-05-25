@@ -27,7 +27,7 @@ mengpi.samplingcloud=mengpi.samplingcloud+[0,0,0.25]
 # 模型 采样
 
 # 进行 投影 采样
-grid = mengpi.samgeneration(id=390, x_grids=5, y_grids=5, intervallength=0.05, intervalangle=3)
+grid = mengpi.samgeneration(id=684, x_grids=5, y_grids=5, intervallength=0.05, intervalangle=3)
 grid = np.array(grid)
 print(len(grid))
 midpoint = np.mean(grid, axis=0)
